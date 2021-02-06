@@ -10,6 +10,10 @@ class Talk(commands.Cog):
     async def hi(self, ctx):
         await ctx.send("hi")
 
+    @commands.command()
+    async def repeat(self, ctx, *, message: str):
+        await ctx.send(message)
+
 
 def setup(bot) -> None:
     bot.add_cog(Talk(bot))
